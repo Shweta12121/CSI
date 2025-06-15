@@ -1,12 +1,10 @@
 const http = require('http');
-const fs = require('fs').promises; // Note we're using fs.promises here
+const fs = require('fs').promises; 
 const path = require('path');
 const url = require('url');
 
-// Directory to store files
 const FILE_DIR = path.join(__dirname, 'files');
 
-// Ensure the directory exists
 async function ensureDirectoryExists() {
     try {
         await fs.access(FILE_DIR);
